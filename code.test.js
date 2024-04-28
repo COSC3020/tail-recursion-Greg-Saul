@@ -12,3 +12,4 @@ assert.strictEqual(code.tailFib(6), 8);
 assert.strictEqual(code.tailFib(10), 55);
 assert.strictEqual(code.tailFib(50), 12586269025);
 assert.strictEqual(code.tailFib(100), 354224848179262000000);
+
