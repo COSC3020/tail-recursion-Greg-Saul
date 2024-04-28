@@ -19,3 +19,27 @@ Is the asymptotic complexity of tail-recursive Fibonacci different from the
 non-tail-recursive version? Why, or why not, and what is the complexity
 (worst-case $\Theta$)? Add your answer, including your reasoning, to this
 markdown file.
+
+## My Analysis
+
+The worst case runtime for my algorithm is $\theta(n)$ this is because the recursion just runs n times and adds the numbers every time. 
+
+```
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+```
+
+This function isn't tail recursion because of the two recursive calls so I will be comparing to that. This method would have a time complexity of $\theta(2^n)$ because if you break it down iteration by iteration, it would be called 2 times for every element in the sequence that we need to get to. the calls could be visually represented as a binary tree with $2^n$ nodes where each node would be a recursive call. 
+
+When compared, tail recursion is much faster because as n grows, the other recursive method can get ineddivient very quickly.
+
+
+
+
+
+
+
+
